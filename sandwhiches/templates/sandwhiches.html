@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
+    <title>Sandwhiches</title>
+</head>
+<body>
+    <h1>Sandwhich Home</h1>
+
+    <h3>Ingredients:</h3>
+    <ul>
+    {% for ingredient in ingredients  %}
+    <li>
+        <a href="/sandwhich/ingredient/{{ ingredient }}">{{ ingredient }}</a>
+        
+    </li>
+    {% endfor %}
+    </ul>
+
+    <p>Click the button if youare hungry!</p>
+
+    <form action="/sandwhich/random">
+        <input type="submit" value="Make a sandwhich!"/>
+        </form>
+</body>
+</html>
